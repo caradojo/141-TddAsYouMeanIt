@@ -1,5 +1,6 @@
 ﻿    using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TddAsIfYouMeanIt
 {
@@ -35,7 +36,7 @@ namespace TddAsIfYouMeanIt
 
         private static bool HasOneRowOfCross(string game)
         {
-            return "xxx"+ "oo-"+ "---" == game;
+            return game.StartsWith("xxx"); //"xxx" + "oo-"+ "---" == game;
         }
 
         [TestMethod]
