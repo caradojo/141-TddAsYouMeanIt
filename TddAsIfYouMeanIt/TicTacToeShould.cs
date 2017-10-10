@@ -18,9 +18,24 @@ namespace TddAsIfYouMeanIt
 
         private static bool HasWinner(string game)
         {
-            return "xxx"+ "oo-"+ "---" == game 
-                || "x--"+ "oxo" + "--x" == game
-                || "x--"+ "xoo" + "x--" == game;
+            return HasOneRowOfCross(game) 
+                || HasOneDiagOfCross(game)
+                || HasColDiagOfCross(game);
+        }
+
+        private static bool HasColDiagOfCross(string game)
+        {
+            return "x--"+ "xoo" + "x--" == game;
+        }
+
+        private static bool HasOneDiagOfCross(string game)
+        {
+            return "x--"+ "oxo" + "--x" == game;
+        }
+
+        private static bool HasOneRowOfCross(string game)
+        {
+            return "xxx"+ "oo-"+ "---" == game;
         }
 
         [TestMethod]
