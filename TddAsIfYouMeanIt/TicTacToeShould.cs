@@ -71,6 +71,16 @@ namespace TddAsIfYouMeanIt
         }
 
         [TestMethod]
+        public void thridLineOfCrossHasWinner()
+        {
+            var game = "oo-"
+                       + "---"
+                       + "xxx";
+            var hasWinner = HasWinner(game);
+            Assert.IsTrue(hasWinner);
+        }
+
+        [TestMethod]
         public void oneDiagOfCrossHasWinner()
         {
             var game = "x--"
