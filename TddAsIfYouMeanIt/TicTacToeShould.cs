@@ -81,6 +81,16 @@ namespace TddAsIfYouMeanIt
         }
 
         [TestMethod]
+        public void fiveMoveHasNoWinner()
+        {
+            var game = "oo-"
+                       + "--x"
+                       + "xx-";
+            var hasWinner = HasWinner(game);
+            Assert.IsFalse(hasWinner);
+        }
+
+        [TestMethod]
         public void oneDiagOfCrossHasWinner()
         {
             var game = "x--"
