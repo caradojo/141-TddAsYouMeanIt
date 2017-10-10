@@ -52,5 +52,15 @@ namespace TddAsIfYouMeanIt
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
+
+        [TestMethod]
+        public void oneColOfCrossHasWinner()
+        {
+            var game = "x--"
+                       + "xoo"
+                       + "x--";
+            var hasWinner = HasWinner(game);
+            Assert.IsTrue(hasWinner);
+        }
     }
 }
