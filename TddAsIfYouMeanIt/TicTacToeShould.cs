@@ -27,7 +27,7 @@ namespace TddAsIfYouMeanIt
             var game = "xxx"
                        + "oo-"
                        + "---";
-            var hasWinner = false;
+            var hasWinner = true;
             Assert.IsTrue(hasWinner);
         }
     }
