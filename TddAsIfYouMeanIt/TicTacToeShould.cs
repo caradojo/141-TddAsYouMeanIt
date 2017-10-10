@@ -19,7 +19,8 @@ namespace TddAsIfYouMeanIt
         private static bool HasWinner(string game)
         {
             return "xxx"+ "oo-"+ "---" == game 
-                || "x--"+ "oxo" + "--x"== game; ;
+                || "x--"+ "oxo" + "--x" == game
+                || "x--"+ "xoo" + "x--" == game;
         }
 
         [TestMethod]
