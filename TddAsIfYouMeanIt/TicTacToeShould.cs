@@ -10,11 +10,16 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void noWinnerAtBegining()
         {
-            var game = "---"
+            var game = CreateGame("---"
                        + "---"
-                       + "---";
+                       + "---");
             var hasWinner = HasWinner(game);
             Assert.IsFalse(hasWinner);
+        }
+
+        private static string CreateGame(string game)
+        {
+            return game;
         }
 
         private static bool HasWinner(string game)
@@ -39,12 +44,14 @@ namespace TddAsIfYouMeanIt
             return game.IndexOf("xxx") % 3 == 0;
         }
 
+
+
         [TestMethod]
         public void noWinnerAfterOneMove()
         {
-            var game = "x--"
+            var game = CreateGame("x--"
                        + "---"
-                       + "---";
+                       + "---");
             var hasWinner = HasWinner(game);
             var nbMove = 1;
             Assert.IsFalse(hasWinner && nbMove == 1);
@@ -53,9 +60,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void oneLineOfCrossHasWinner()
         {
-            var game = "xxx"
+            var game = CreateGame("xxx"
                        + "oo-"
-                       + "---";
+                       + "---");
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
@@ -63,9 +70,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void secondLineOfCrossHasWinner()
         {
-            var game = "oo-" 
+            var game = CreateGame("oo-" 
                        + "xxx"
-                       + "---";
+                       + "---");
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
@@ -73,9 +80,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void thridLineOfCrossHasWinner()
         {
-            var game = "oo-"
+            var game = CreateGame("oo-"
                        + "---"
-                       + "xxx";
+                       + "xxx");
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
@@ -83,9 +90,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void fiveMoveHasNoWinner()
         {
-            var game = "oo-"
+            var game = CreateGame("oo-"
                        + "--x"
-                       + "xx-";
+                       + "xx-");
             var hasWinner = HasWinner(game);
             Assert.IsFalse(hasWinner);
         }
@@ -93,9 +100,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void oneDiagOfCrossHasWinner()
         {
-            var game = "x--"
+            var game = CreateGame("x--"
                        + "oxo"
-                       + "--x";
+                       + "--x");
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
@@ -103,9 +110,9 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void oneColOfCrossHasWinner()
         {
-            var game = "x--"
+            var game = CreateGame("x--"
                        + "xoo"
-                       + "x--";
+                       + "x--");
             var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
