@@ -12,5 +12,12 @@ namespace TddAsIfYouMeanIt
             var hasWinner = false;
             Assert.IsFalse(hasWinner);
         }
+
+        [TestMethod]
+        public void noWinnerAfterOneMove()
+        {
+            var hasWinner = true;
+            Assert.IsFalse(hasWinner);
+        }
     }
 }
