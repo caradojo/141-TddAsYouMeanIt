@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TicTacToe.cs" />
     <Compile Include="TicTacToeShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
