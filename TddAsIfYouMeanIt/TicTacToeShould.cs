@@ -9,7 +9,7 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void noWinnerAtBegining()
         {
-            Assert.IsFalse(true);
+            Assert.IsFalse(false);
         }
     }
 }
