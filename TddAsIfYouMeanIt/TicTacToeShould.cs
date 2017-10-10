@@ -36,9 +36,7 @@ namespace TddAsIfYouMeanIt
 
         private static bool HasOneRowOfCross(string game)
         {
-            return game.StartsWith("xxx")
-                   || game.Skip(3).ToString().StartsWith("xxx")
-                   || game.Skip(3).Skip(3).ToString().StartsWith("xxx");
+            return game.IndexOf("xxx") != -1;
         }
 
         [TestMethod]
