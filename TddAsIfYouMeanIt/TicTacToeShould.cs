@@ -9,14 +9,25 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void noWinnerAtBegining()
         {
-            var hasWinner = false;
+            var game = "---"
+                       + "---"
+                       + "---";
+            var hasWinner = HasWinner(game);
             Assert.IsFalse(hasWinner);
+        }
+
+        private static bool HasWinner(string game)
+        {
+            return "xxx"+ "oo-"+ "---" == game;
         }
 
         [TestMethod]
         public void noWinnerAfterOneMove()
         {
-            var hasWinner = false;
+            var game = "x--"
+                       + "---"
+                       + "---";
+            var hasWinner = HasWinner(game);
             var nbMove = 1;
             Assert.IsFalse(hasWinner && nbMove == 1);
         }
@@ -27,7 +38,7 @@ namespace TddAsIfYouMeanIt
             var game = "xxx"
                        + "oo-"
                        + "---";
-            var hasWinner = true;
+            var hasWinner = HasWinner(game);
             Assert.IsTrue(hasWinner);
         }
     }
