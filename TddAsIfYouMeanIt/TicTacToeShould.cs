@@ -17,7 +17,18 @@ namespace TddAsIfYouMeanIt
         public void noWinnerAfterOneMove()
         {
             var hasWinner = false;
-            Assert.IsFalse(hasWinner);
+            var nbMove = 1;
+            Assert.IsFalse(hasWinner && nbMove == 1);
+        }
+
+        [TestMethod]
+        public void oneLineOfCrossHasWinner()
+        {
+            var game = "xxx"
+                       + "oo-"
+                       + "---";
+            var hasWinner = false;
+            Assert.IsTrue(hasWinner);
         }
     }
 }
