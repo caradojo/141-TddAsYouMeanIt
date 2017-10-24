@@ -13,7 +13,7 @@
                    || HasOneDiagOfCross(game)
                    || HasColDiagOfCross(game);
         }
-
+         
         private static bool HasColDiagOfCross(string game)
         {
             return "x--"+ "xoo" + "x--" == game;
@@ -24,7 +24,7 @@
             return "x--"+ "oxo" + "--x" == game;
         }
 
-        private static bool HasOneRowOfCross(string game)
+            private static bool HasOneRowOfCross(string game)
         {
             return game.IndexOf("xxx") % 3 == 0;
         }
