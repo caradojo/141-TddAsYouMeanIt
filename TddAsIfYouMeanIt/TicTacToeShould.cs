@@ -10,19 +10,24 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void no_winner_for_blank_game()
         {
-            Assert.IsFalse(false);
+            Assert.IsFalse(hasWinner());
         }
 
         [TestMethod]
         public void no_winner_with_two_pieces()
         {
-            Assert.IsFalse(false);
+            Assert.IsFalse(hasWinner());
         }
 
         [TestMethod]
         public void no_winner_with_four_pieces()
         {
-            Assert.IsFalse(false);
+            Assert.IsFalse(hasWinner());
+        }
+
+        private static bool hasWinner()
+        {
+            return false;
         }
     }
 }
