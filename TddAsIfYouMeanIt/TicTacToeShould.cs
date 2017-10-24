@@ -7,73 +7,64 @@ namespace TddAsIfYouMeanIt
     [TestClass]
     public class TicTacToeShould
     {
+        private static string _game;
+
         [TestMethod]
         public void no_winner_for_blank_game()
         {
+            CreateGame(".........");
+
             Assert.IsFalse(hasWinner());
         }
 
         [TestMethod]
         public void no_winner_with_two_pieces()
         {
+            CreateGame("...x....o");
+
             Assert.IsFalse(hasWinner());
         }
 
         [TestMethod]
         public void no_winner_with_four_pieces()
         {
+            CreateGame("...xx..oo");
+
             Assert.IsFalse(hasWinner());
         }
 
         [TestMethod]
         public void has_winner_for_three_crosses_on_first_line()
         {
-            Assert.IsTrue(hasLineWithCross());
+            CreateGame("xxx....oo");
+
+            Assert.IsTrue(hasWinner());
         }
 
         [TestMethod]
         public void has_winner_for_three_crosses_on_second_line()
         {
-            Assert.IsTrue(hasLineWithCross());
+            CreateGame("...xxx.oo");
+
+            Assert.IsTrue(hasWinner());
         }
 
         [TestMethod]
         public void has_winner_for_three_crosses_on_third_line()
         {
-            Assert.IsTrue(hasLineWithCross());
-        }
+            CreateGame(".oo...xxx");
 
-        [TestMethod]
-        public void has_winner_for_three_crosses_on_first_column()
-        {
-            Assert.IsTrue(hasColumnWithCross());
-        }
-
-        [TestMethod]
-        public void has_winner_for_three_crosses_on_second_column()
-        {
-            Assert.IsTrue(hasColumnWithCross());
-        }
-
-        [TestMethod]
-        public void has_winner_for_three_crosses_on_third_column()
-        {
-            Assert.IsTrue(hasColumnWithCross());
-        }
-
-        private bool hasColumnWithCross()
-        {
-            return true;
-        }
-
-        private static bool hasLineWithCross()
-        {
-            return true;
+            Assert.IsTrue(hasWinner());
         }
 
         private static bool hasWinner()
         {
-            return false;
+            return _game.Contains("xxx");
+        }
+
+        private static void CreateGame(string game)
+        {
+            _game = game;
         }
     }
 }
