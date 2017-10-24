@@ -12,5 +12,17 @@ namespace TddAsIfYouMeanIt
         {
             Assert.IsFalse(false);
         }
+
+        [TestMethod]
+        public void no_winner_with_two_pieces()
+        {
+            Assert.IsFalse(false);
+        }
+
+        [TestMethod]
+        public void no_winner_with_four_pieces()
+        {
+            Assert.IsFalse(false);
+        }
     }
 }
