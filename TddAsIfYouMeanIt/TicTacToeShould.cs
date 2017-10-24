@@ -7,6 +7,10 @@ namespace TddAsIfYouMeanIt
     [TestClass]
     public class TicTacToeShould
     {
-
+        [TestMethod]
+        public void no_winner_for_blank_game()
+        {
+            Assert.IsFalse(false);
+        }
     }
 }
