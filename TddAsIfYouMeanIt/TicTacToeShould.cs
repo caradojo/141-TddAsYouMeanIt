@@ -43,11 +43,33 @@ namespace TddAsIfYouMeanIt
             Assert.IsTrue(hasLineWithCross());
         }
 
-        private static bool hasLineWithCross()
+        [TestMethod]
+        public void has_winner_for_three_crosses_on_first_column()
+        {
+            Assert.IsTrue(hasColumnWithCross());
+        }
+
+        [TestMethod]
+        public void has_winner_for_three_crosses_on_second_column()
+        {
+            Assert.IsTrue(hasColumnWithCross());
+        }
+
+        [TestMethod]
+        public void has_winner_for_three_crosses_on_third_column()
+        {
+            Assert.IsTrue(hasColumnWithCross());
+        }
+
+        private bool hasColumnWithCross()
         {
             return true;
         }
 
+        private static bool hasLineWithCross()
+        {
+            return true;
+        }
 
         private static bool hasWinner()
         {
