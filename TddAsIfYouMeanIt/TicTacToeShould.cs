@@ -28,24 +28,25 @@ namespace TddAsIfYouMeanIt
         [TestMethod]
         public void has_winner_for_three_crosses_on_first_line()
         {
-            Assert.IsTrue(true);
+            Assert.IsTrue(hasLineWithCross());
         }
 
         [TestMethod]
         public void has_winner_for_three_crosses_on_second_line()
         {
-            Assert.IsTrue(true);
+            Assert.IsTrue(hasLineWithCross());
         }
 
         [TestMethod]
         public void has_winner_for_three_crosses_on_third_line()
         {
-            Assert.IsTrue(true);
+            Assert.IsTrue(hasLineWithCross());
         }
 
-        
-
-
+        private static bool hasLineWithCross()
+        {
+            return true;
+        }
 
 
         private static bool hasWinner()
